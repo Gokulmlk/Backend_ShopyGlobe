@@ -21,6 +21,34 @@ app.use('/api/products', require('./routes/productRoutes'));
 app.use('/api/cart', require('./routes/cartRoutes'));
 
 // Welcome route
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    message: 'Welcome to ShoppyGlobe API',
+    version: '1.0.0',
+    endpoints: {
+      auth: {
+        register: 'POST /api/auth/register',
+        login: 'POST /api/auth/login',
+        getMe: 'GET /api/auth/me (Protected)',
+      },
+      products: {
+        getAll: 'GET /api/products',
+        getOne: 'GET /api/products/:id',
+        create: 'POST /api/products',
+        update: 'PUT /api/products/:id',
+        delete: 'DELETE /api/products/:id',
+      },
+      cart: {
+        getCart: 'GET /api/cart (Protected)',
+        addToCart: 'POST /api/cart (Protected)',
+        updateItem: 'PUT /api/cart/:productId (Protected)',
+        removeItem: 'DELETE /api/cart/:productId (Protected)',
+        clearCart: 'DELETE /api/cart (Protected)',
+      },
+    },
+  });
+});
 
 
 app.use(errorHandler);// Error handler middleware 
