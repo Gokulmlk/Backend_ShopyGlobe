@@ -525,12 +525,5 @@ GitHub: [@Gokulmlk](https://github.com/Gokulmlk)
 
 ---
 
-## 📞 Support
-
-For issues or questions:
-- Open an issue on [GitHub](https://github.com/Gokulmlk/Backend_ShopyGlobe/issues)
-- Email: [your-email@example.com]
-
----
 
 **Happy Coding! 🚀**
